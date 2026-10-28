@@ -4,10 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>封面参考图库｜纪实社科封面参考与提示词反推</title>
-    <script type="module" crossorigin src="./assets/index-lH5OLz8R.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-MMBqAl_S.css">
+    <script type="module" crossorigin src="./assets/index-qKGTU0qg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-TM2tVXy2.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // 资源兜底提示：若 JS/CSS 没加载成功（例如 CDN 仍缓存旧版本、旧 hash 文件已删除），
+      // #root 会一直为空，此时给出明确提示，避免白屏且无任何反馈
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var root = document.getElementById("root");
+          if (root && !root.children.length) {
+            root.innerHTML =
+              '<div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;font-family:PingFang SC,system-ui,sans-serif;color:#2D3E50">' +
+              '<h2 style="margin:0 0 12px;font-size:20px">页面资源加载失败</h2>' +
+              '<p style="margin:0 0 24px;color:#6B7888;font-size:14px">请强制刷新后重试（Mac：Command + Shift + R，Windows：Ctrl + Shift + R）</p>' +
+              '<button onclick="location.reload()" style="padding:10px 20px;border:none;border-radius:10px;background:#FFEE8C;color:#6b4e00;font-weight:600;font-size:14px;cursor:pointer">刷新页面</button>' +
+              "</div>";
+          }
+        }, 2500);
+      });
+    </script>
   </body>
 </html>
